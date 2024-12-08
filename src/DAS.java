@@ -12,8 +12,20 @@ public class DAS {
             System.err.println("Incorrect arguments");
             System.exit(1);
         }
-        int port = Integer.parseInt(args[0]);
-        int number = Integer.parseInt(args[1]);
+        int port  = 0;
+        int number = 0;
+        try {
+            port = Integer.parseInt(args[0]);
+        } catch (NumberFormatException e) {
+            System.err.println("Invalid port number. Please provide a valid integer for the port.");
+            System.exit(1);
+        }
+        try {
+            number = Integer.parseInt(args[1]);
+        } catch (NumberFormatException e) {
+            System.err.println("Invalid number. Please provide a valid integer as the second argument.");
+            System.exit(1);
+        }
         try {
             DatagramSocket socket = new DatagramSocket(port);
             System.out.println("Master mode activated on port " + port);
