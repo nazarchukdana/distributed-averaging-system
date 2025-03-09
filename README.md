@@ -88,5 +88,5 @@ DAS follows a simple UDP-based protocol:
 
 ## Contributors
 - **Author:** Dana Nazarchuk
-- Crated as a school project for Polish Japanese Academy of Information Technologies
+- Created as a school project for Polish Japanese Academy of Information Technologies
 
