@@ -38,7 +38,7 @@ public class DAS {
     }
     private static void runMaster(DatagramSocket socket, int masterNumber) throws SocketException {
         List<Integer> nums = new ArrayList<>();
-        nums.add(masterNumber);
+        if(masterNumber != 0) nums.add(masterNumber);
         int slaveNumber;
         String received;
         byte[] buf = new byte[BUFFER_SIZE];
